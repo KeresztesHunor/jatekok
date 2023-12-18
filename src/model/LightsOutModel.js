@@ -20,11 +20,7 @@ class LightsOutModel
 
     get elemek()
     {
-        const LISTA = [];
-        this.#elemek.forEach(elem => {
-            LISTA.push(elem ? "on" : "off");
-        });
-        return LISTA;
+        return [...this.#elemek];
     }
 
     setElemek(index)

@@ -47,21 +47,7 @@ class TicTacToeModel
 
     get elemek()
     {
-        const LISTA = [];
-        this.#elemek.forEach(elem => {
-            LISTA.push((() => {
-                switch (elem)
-                {
-                    case 1:
-                        return "X";
-                    case -1:
-                        return "O";
-                    default:
-                        return "";
-                }
-            })());
-        });
-        return LISTA;
+        return [...this.#elemek];
     }
 
     setElem(index)
